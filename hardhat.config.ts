@@ -10,6 +10,7 @@ dotenv.config()
 const privateKey =
   process.env.PRIVATE_KEY_1;
 const privateKey2 =process.env.PRIVATE_KEY_2;
+const ertherScanApiKey =process.env.ETHER_SCAN_API_KEY as string;
 
 const config: HardhatUserConfig = {
   solidity: "0.8.17",
@@ -71,7 +72,18 @@ const config: HardhatUserConfig = {
       url: "https://mainnet.telos.net/evm",
       chainId: 40,
       accounts:[`${privateKey}`, `${privateKey2}`],
-    }
+    },
+    goerli:{
+      url: "https://goerli.infura.io/v3/22d4e358842e4541bd9618b325b5385e",
+      chainId: 5,
+      accounts:[`${privateKey}`, `${privateKey2}`],
+      verify:{
+        etherscan:{
+          apiKey:ertherScanApiKey,
+          apiUrl:""
+        }
+      }
+    },
   },
   namedAccounts:{
     deployer:{
