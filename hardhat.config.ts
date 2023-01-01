@@ -23,6 +23,11 @@ const config: HardhatUserConfig = {
         enabled:false
       },
     },
+    mainnet:{
+      url: "https://rpc.ankr.com/eth",
+      chainId: 1,
+      accounts:[`${privateKey}`, `${privateKey2}`],
+    },
     bsc:{
       url: "https://rpc.ankr.com/bsc",
       chainId: 56,
@@ -71,6 +76,26 @@ const config: HardhatUserConfig = {
     telos:{
       url: "https://mainnet.telos.net/evm",
       chainId: 40,
+      accounts:[`${privateKey}`, `${privateKey2}`],
+    },
+    aurora:{
+      url: "https://mainnet.aurora.dev",
+      chainId: 1313161554,
+      accounts:[`${privateKey}`, `${privateKey2}`],
+    },
+    celo:{
+      url: "https://rpc.ankr.com/celo",
+      chainId: 42220,
+      accounts:[`${privateKey}`, `${privateKey2}`],
+    },
+    doge:{
+      url: "https://rpc.dogechain.dog",
+      chainId: 2000,
+      accounts:[`${privateKey}`, `${privateKey2}`],
+    },
+    okc:{
+      url: "https://exchainrpc.okex.org",
+      chainId: 66,
       accounts:[`${privateKey}`, `${privateKey2}`],
     },
     goerli:{
