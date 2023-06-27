@@ -2,7 +2,7 @@
   "language": "Solidity",
   "sources": {
     "contracts/Akka.sol": {
-      "content": "// SPDX-License-Identifier: UNLICENSED\npragma solidity 0.8.17;\n\ncontract Akka {\n    function helloDeFi() public returns (string memory) {\n        return \"Akka Finance\";\n    }\n}\n"
+      "content": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity 0.8.17;\r\n\r\ncontract Akka {\r\n    function helloDeFi() public returns (string memory) {\r\n        return \"Akka Finance\";\r\n    }\r\n}\r\n"
     }
   },
   "settings": {

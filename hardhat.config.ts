@@ -98,6 +98,11 @@ const config: HardhatUserConfig = {
       chainId: 66,
       accounts:[`${privateKey}`, `${privateKey2}`],
     },
+    apothem:{
+      url: "https://apothem.xdcrpc.com",
+      chainId: 51,
+      accounts:[`${privateKey}`, `${privateKey2}`],
+    },
     goerli:{
       url: "https://goerli.infura.io/v3/22d4e358842e4541bd9618b325b5385e",
       chainId: 5,

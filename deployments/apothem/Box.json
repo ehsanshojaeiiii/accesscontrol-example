@@ -1,0 +1,76 @@
+{
+  "address": "0x6B8411faeb19E4AA5826147f5741C61472AF0543",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "counter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "incr",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x83a093344a7fe9427970cbd88ec76e9ad59d55832a2764c357a3038ba6e9307e",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0x09aE5Af01b979d14cD2Ff237aFECBf8b5B29929b",
+    "contractAddress": null,
+    "transactionIndex": 1,
+    "gasUsed": "142624",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xa7229d9160d796898c373a48a45a4145734c3795b7f602a6884ca597b2ada33d",
+    "transactionHash": "0x83a093344a7fe9427970cbd88ec76e9ad59d55832a2764c357a3038ba6e9307e",
+    "logs": [],
+    "blockNumber": 50970412,
+    "cumulativeGasUsed": "142624",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "1dcf665b3de3a5cde488958c12830cc1",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"counter\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"incr\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Box.sol\":\"Box\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Box.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\r\\npragma solidity 0.8.17;\\r\\n\\r\\ncontract Box {\\r\\n    uint256 public counter = 0;\\r\\n\\r\\n    function incr() external {\\r\\n        counter += 1;\\r\\n    }\\r\\n}\\r\\n\",\"keccak256\":\"0x936e17a6cc5478e6f238983052d15fddce2bcf757677856eaab20687273bf197\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610151806100246000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063119fbbd41461003b57806361bc221a14610045575b600080fd5b610043610063565b005b61004d61007e565b60405161005a919061009d565b60405180910390f35b600160008082825461007591906100e7565b92505081905550565b60005481565b6000819050919050565b61009781610084565b82525050565b60006020820190506100b2600083018461008e565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006100f282610084565b91506100fd83610084565b9250828201905080821115610115576101146100b8565b5b9291505056fea2646970667358221220b1d9d7484d5b1bd504c5f351dad1fa17b20a822057f8cd11b74fbb060b8c5a2264736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063119fbbd41461003b57806361bc221a14610045575b600080fd5b610043610063565b005b61004d61007e565b60405161005a919061009d565b60405180910390f35b600160008082825461007591906100e7565b92505081905550565b60005481565b6000819050919050565b61009781610084565b82525050565b60006020820190506100b2600083018461008e565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006100f282610084565b91506100fd83610084565b9250828201905080821115610115576101146100b8565b5b9291505056fea2646970667358221220b1d9d7484d5b1bd504c5f351dad1fa17b20a822057f8cd11b74fbb060b8c5a2264736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 4,
+        "contract": "contracts/Box.sol:Box",
+        "label": "counter",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
