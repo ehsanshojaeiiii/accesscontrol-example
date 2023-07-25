@@ -9,115 +9,120 @@ dotenv.config()
 
 const privateKey =
   process.env.PRIVATE_KEY_1;
-const privateKey2 =process.env.PRIVATE_KEY_2;
-const ertherScanApiKey =process.env.ETHER_SCAN_API_KEY as string;
+const privateKey2 = process.env.PRIVATE_KEY_2;
+const ertherScanApiKey = process.env.ETHER_SCAN_API_KEY as string;
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.17",
-  defaultNetwork:"hardhat",
+  solidity: "0.8.19",
+  defaultNetwork: "anvil",
   networks: {
     hardhat: {
       chainId: 1337,
       forking: {
         url: "https://rpc.ankr.com/bsc",
-        enabled:false
+        enabled: false
       },
     },
-    mainnet:{
+    anvil: {
+      url: `${process.env.ANVIL_FORKING_RPC}`,
+      chainId: parseInt(process.env.ANVIL_FORKING_CHAIN_ID as string),
+      accounts: [`${process.env.ANVIL_FORKING_RPC_ACCOUNT}`],
+    },
+    mainnet: {
       url: "https://rpc.ankr.com/eth",
       chainId: 1,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    bsc:{
+    bsc: {
       url: "https://rpc.ankr.com/bsc",
       chainId: 56,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    ftm:{
+    ftm: {
       url: "https://rpc.ankr.com/fantom",
       chainId: 250,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
     bscTestnet: {
       url: "http://data-seed-prebsc-2-s2.binance.org:8545/",
       chainId: 97,
       accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    ftmTestnet:{
+    ftmTestnet: {
       url: "https://rpc.ankr.com/fantom_testnet",
       chainId: 4002,
       accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    rinkeby:{
+    rinkeby: {
       url: "https://rpc.ankr.com/eth_rinkeby",
       chainId: 4,
       accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    ropsten:{
+    ropsten: {
       url: "https://rpc.ankr.com/eth_ropsten",
       chainId: 3,
       accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    mumbai:{
+    mumbai: {
       url: "https://rpc.ankr.com/polygon_mumbai",
       chainId: 80001,
       accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    bitgert:{
+    bitgert: {
       url: "https://rpc.icecreamswap.com",
       chainId: 32520,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    wan:{
+    wan: {
       url: "https://gwan-ssl.wandevs.org:56891",
       chainId: 888,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    telos:{
+    telos: {
       url: "https://mainnet.telos.net/evm",
       chainId: 40,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    aurora:{
+    aurora: {
       url: "https://mainnet.aurora.dev",
       chainId: 1313161554,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    celo:{
+    celo: {
       url: "https://rpc.ankr.com/celo",
       chainId: 42220,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    doge:{
+    doge: {
       url: "https://rpc.dogechain.dog",
       chainId: 2000,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    okc:{
+    okc: {
       url: "https://exchainrpc.okex.org",
       chainId: 66,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    apothem:{
+    apothem: {
       url: "https://apothem.xdcrpc.com",
       chainId: 51,
-      accounts:[`${privateKey}`, `${privateKey2}`],
+      accounts: [`${privateKey}`, `${privateKey2}`],
     },
-    goerli:{
+    goerli: {
       url: "https://goerli.infura.io/v3/22d4e358842e4541bd9618b325b5385e",
       chainId: 5,
-      accounts:[`${privateKey}`, `${privateKey2}`],
-      verify:{
-        etherscan:{
-          apiKey:ertherScanApiKey,
-          apiUrl:""
+      accounts: [`${privateKey}`, `${privateKey2}`],
+      verify: {
+        etherscan: {
+          apiKey: ertherScanApiKey,
+          apiUrl: ""
         }
       }
     },
   },
-  namedAccounts:{
-    deployer:{
-      default:0
+  namedAccounts: {
+    deployer: {
+      default: 0
     }
   }
 };
